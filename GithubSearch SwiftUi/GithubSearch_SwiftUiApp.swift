@@ -11,7 +11,9 @@ import SwiftUI
 struct GithubSearch_SwiftUiApp: App {
     var body: some Scene {
         WindowGroup {
+            let store = ReposStore(service: .init())
             ContentView()
+                .environmentObject(store)
         }
     }
 }

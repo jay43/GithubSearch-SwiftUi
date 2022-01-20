@@ -11,6 +11,10 @@
 		4FE5732B27992804009457B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5732A27992804009457B3 /* ContentView.swift */; };
 		4FE5732D2799280C009457B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5732C2799280C009457B3 /* Assets.xcassets */; };
 		4FE573302799280C009457B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5732F2799280C009457B3 /* Preview Assets.xcassets */; };
+		4FE573382799287B009457B3 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE573372799287B009457B3 /* GitHubService.swift */; };
+		4FE5733B279929F8009457B3 /* RepoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5733A279929F8009457B3 /* RepoRow.swift */; };
+		4FE5733D27992B94009457B3 /* ReposStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5733C27992B94009457B3 /* ReposStore.swift */; };
+		4FE5733F27993A82009457B3 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5733E27993A82009457B3 /* RemoteImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		4FE5732A27992804009457B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FE5732C2799280C009457B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE5732F2799280C009457B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FE573372799287B009457B3 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		4FE5733A279929F8009457B3 /* RepoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRow.swift; sourceTree = "<group>"; };
+		4FE5733C27992B94009457B3 /* ReposStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposStore.swift; sourceTree = "<group>"; };
+		4FE5733E27993A82009457B3 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,14 @@
 		4FE5732727992804009457B3 /* GithubSearch SwiftUi */ = {
 			isa = PBXGroup;
 			children = (
+				4FE5734027993A8D009457B3 /* Custom */,
+				4FE57339279929E8009457B3 /* Views */,
+				4FE5733627992859009457B3 /* Service */,
 				4FE5732827992804009457B3 /* GithubSearch_SwiftUiApp.swift */,
 				4FE5732A27992804009457B3 /* ContentView.swift */,
 				4FE5732C2799280C009457B3 /* Assets.xcassets */,
 				4FE5732E2799280C009457B3 /* Preview Content */,
+				4FE5733C27992B94009457B3 /* ReposStore.swift */,
 			);
 			path = "GithubSearch SwiftUi";
 			sourceTree = "<group>";
@@ -65,6 +77,30 @@
 				4FE5732F2799280C009457B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FE5733627992859009457B3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4FE573372799287B009457B3 /* GitHubService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4FE57339279929E8009457B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5733A279929F8009457B3 /* RepoRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4FE5734027993A8D009457B3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5733E27993A82009457B3 /* RemoteImageView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FE5732B27992804009457B3 /* ContentView.swift in Sources */,
+				4FE573382799287B009457B3 /* GitHubService.swift in Sources */,
+				4FE5733B279929F8009457B3 /* RepoRow.swift in Sources */,
+				4FE5733D27992B94009457B3 /* ReposStore.swift in Sources */,
+				4FE5733F27993A82009457B3 /* RemoteImageView.swift in Sources */,
 				4FE5732927992804009457B3 /* GithubSearch_SwiftUiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
