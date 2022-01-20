@@ -5,6 +5,7 @@ Repository item with
   - owner avatar
   - repo name
   - repo description
+  - repo views
   
 Image load using
   - iOS 15.0+ with AsyncImage
