@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F45614127A7ABBB00A66114 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4F45614027A7ABBB00A66114 /* Kingfisher */; };
+		4F45614327A7AC0500A66114 /* RemoteImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45614227A7AC0500A66114 /* RemoteImageModifier.swift */; };
 		4FE5732927992804009457B3 /* GithubSearch_SwiftUiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5732827992804009457B3 /* GithubSearch_SwiftUiApp.swift */; };
 		4FE5732B27992804009457B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5732A27992804009457B3 /* ContentView.swift */; };
 		4FE5732D2799280C009457B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5732C2799280C009457B3 /* Assets.xcassets */; };
@@ -18,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F45614227A7AC0500A66114 /* RemoteImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageModifier.swift; sourceTree = "<group>"; };
 		4FE5732527992804009457B3 /* GithubSearch SwiftUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubSearch SwiftUi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE5732827992804009457B3 /* GithubSearch_SwiftUiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearch_SwiftUiApp.swift; sourceTree = "<group>"; };
 		4FE5732A27992804009457B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F45614127A7ABBB00A66114 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE5733E27993A82009457B3 /* RemoteImageView.swift */,
+				4F45614227A7AC0500A66114 /* RemoteImageModifier.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -119,6 +124,9 @@
 			dependencies = (
 			);
 			name = "GithubSearch SwiftUi";
+			packageProductDependencies = (
+				4F45614027A7ABBB00A66114 /* Kingfisher */,
+			);
 			productName = "GithubSearch SwiftUi";
 			productReference = 4FE5732527992804009457B3 /* GithubSearch SwiftUi.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 4FE5731C27992804009457B3;
+			packageReferences = (
+				4F45613F27A7ABBB00A66114 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4FE5732627992804009457B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,6 +187,7 @@
 				4FE5732B27992804009457B3 /* ContentView.swift in Sources */,
 				4FE573382799287B009457B3 /* GitHubService.swift in Sources */,
 				4FE5733B279929F8009457B3 /* RepoRow.swift in Sources */,
+				4F45614327A7AC0500A66114 /* RemoteImageModifier.swift in Sources */,
 				4FE5733D27992B94009457B3 /* ReposStore.swift in Sources */,
 				4FE5733F27993A82009457B3 /* RemoteImageView.swift in Sources */,
 				4FE5732927992804009457B3 /* GithubSearch_SwiftUiApp.swift in Sources */,
@@ -379,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F45613F27A7ABBB00A66114 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F45614027A7ABBB00A66114 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F45613F27A7ABBB00A66114 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4FE5731D27992804009457B3 /* Project object */;
 }
