@@ -8,6 +8,29 @@
 import SwiftUI
 import class Kingfisher.KingfisherManager
 
+struct HeadLineStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .lineSpacing(8)
+            .foregroundColor(.primary)
+    }
+}
+
+struct ContentStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.body)
+            .lineSpacing(4)
+            .foregroundColor(.secondary)
+    }
+}
+
+extension Text {
+    func textStyle<Style: ViewModifier>(_ style: Style) -> some View {
+        ModifiedContent(content: self, modifier: style)
+    }
+}
 struct RepoRow: View {
     let repo: Repo
     
@@ -18,8 +41,10 @@ struct RepoRow: View {
                 VStack(alignment: .leading) {
                     HStack {
                         Text(repo.name)
+                            .textStyle(HeadLineStyle())
                         Spacer()
                         Text(repo.watchers.description)
+                            .textStyle(ContentStyle())
                     }.font(.headline)
                     Text(repo.description ?? "No Description")
                         .font(.subheadline)
