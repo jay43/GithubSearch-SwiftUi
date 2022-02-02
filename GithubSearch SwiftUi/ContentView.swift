@@ -30,16 +30,23 @@ struct ContentView_Previews: PreviewProvider {
 //3. Handle life cycle (onAppear/onDisappear)
 //4. Provide action handlers to the Rendering View
 struct SearchContainerView: View {
-    @EnvironmentObject var repoStore: ReposStore
+    //@EnvironmentObject var repoStore: ReposStore
+    @EnvironmentObject var store: AppStore
     @State var query = "Swift"
     
     var body: some View {
-        SearchView(query: $query, repos: repoStore.repos, onCommit: fetch)
-            .onAppear(perform: fetch)
+        SearchView(
+            query: $query,
+            repos: store.state.searchResult,
+            onCommit: fetch
+        ).onAppear(perform: fetch)
+//        SearchView(query: $query, repos: repoStore.repos, onCommit: fetch)
+//            .onAppear(perform: fetch)
     }
     
     private func fetch() {
-        repoStore.fetch(matching: query)
+        //repoStore.fetch(matching: query)
+        store.send(.search(query: query))
     }
 }
 

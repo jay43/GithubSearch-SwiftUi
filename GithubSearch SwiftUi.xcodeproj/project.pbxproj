@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3346EE27A9015100999A60 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3346ED27A9015100999A60 /* App.swift */; };
+		4F3346F027A9041900999A60 /* ReduxRepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3346EF27A9041900999A60 /* ReduxRepoStore.swift */; };
 		4F45614127A7ABBB00A66114 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4F45614027A7ABBB00A66114 /* Kingfisher */; };
 		4F45614327A7AC0500A66114 /* RemoteImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45614227A7AC0500A66114 /* RemoteImageModifier.swift */; };
 		4FE5732927992804009457B3 /* GithubSearch_SwiftUiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5732827992804009457B3 /* GithubSearch_SwiftUiApp.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3346ED27A9015100999A60 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		4F3346EF27A9041900999A60 /* ReduxRepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxRepoStore.swift; sourceTree = "<group>"; };
 		4F45614227A7AC0500A66114 /* RemoteImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageModifier.swift; sourceTree = "<group>"; };
 		4FE5732527992804009457B3 /* GithubSearch SwiftUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubSearch SwiftUi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE5732827992804009457B3 /* GithubSearch_SwiftUiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearch_SwiftUiApp.swift; sourceTree = "<group>"; };
@@ -44,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3346EC27A9013200999A60 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5733C27992B94009457B3 /* ReposStore.swift */,
+				4F3346EF27A9041900999A60 /* ReduxRepoStore.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
 		4FE5731C27992804009457B3 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +76,7 @@
 		4FE5732727992804009457B3 /* GithubSearch SwiftUi */ = {
 			isa = PBXGroup;
 			children = (
+				4F3346EC27A9013200999A60 /* Observables */,
 				4FE5734027993A8D009457B3 /* Custom */,
 				4FE57339279929E8009457B3 /* Views */,
 				4FE5733627992859009457B3 /* Service */,
@@ -70,7 +84,7 @@
 				4FE5732A27992804009457B3 /* ContentView.swift */,
 				4FE5732C2799280C009457B3 /* Assets.xcassets */,
 				4FE5732E2799280C009457B3 /* Preview Content */,
-				4FE5733C27992B94009457B3 /* ReposStore.swift */,
+				4F3346ED27A9015100999A60 /* App.swift */,
 			);
 			path = "GithubSearch SwiftUi";
 			sourceTree = "<group>";
@@ -185,10 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FE5732B27992804009457B3 /* ContentView.swift in Sources */,
+				4F3346F027A9041900999A60 /* ReduxRepoStore.swift in Sources */,
 				4FE573382799287B009457B3 /* GitHubService.swift in Sources */,
 				4FE5733B279929F8009457B3 /* RepoRow.swift in Sources */,
 				4F45614327A7AC0500A66114 /* RemoteImageModifier.swift in Sources */,
 				4FE5733D27992B94009457B3 /* ReposStore.swift in Sources */,
+				4F3346EE27A9015100999A60 /* App.swift in Sources */,
 				4FE5733F27993A82009457B3 /* RemoteImageView.swift in Sources */,
 				4FE5732927992804009457B3 /* GithubSearch_SwiftUiApp.swift in Sources */,
 			);

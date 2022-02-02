@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 struct Owner: Decodable, Identifiable {
     var id: Int
@@ -59,5 +60,26 @@ class GithubService {
                 }
             }
         }.resume()
+    }
+    
+    func searchPublisher(matching query: String) -> AnyPublisher<[Repo], Error> {
+        guard
+            var urlComponents = URLComponents(string: "https://api.github.com/search/repositories")
+        else { preconditionFailure("Can't create url components...") }
+        
+        urlComponents.queryItems = [
+            URLQueryItem(name: "q", value: query)
+        ]
+        
+        guard
+            let url = urlComponents.url
+        else { preconditionFailure("Can't create url from url components...") }
+        
+        return session
+            .dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: SearchResponse.self, decoder: decoder)
+            .map { $0.items }
+            .eraseToAnyPublisher()
     }
 }
